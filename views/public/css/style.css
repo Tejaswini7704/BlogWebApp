@@ -1,0 +1,34 @@
+/* Style for input fields */
+input[type="text"] {
+    width: 100%;
+    max-width: 1100px; /* Increased width */
+    padding: 15px;
+    border: 2px solid #555;
+    border-radius: 10px;
+    font-size: 20px;
+    display: block;
+    margin: 10px auto; /* Centering the box */
+}
+
+textarea {
+    width: 100%;
+    max-width: 1100px; /* Increased width */
+    height: 350px; /* Increased height */
+    padding: 15px;
+    border: 2px solid #555;
+    border-radius: 10px;
+    font-size: 20px;
+    resize: none;
+}
+.title-input {
+    width: 100%;  /* Make it expand across the page */
+    max-width: 800px; /* Prevent it from being too wide */
+    height: 50px; /* Increase height */
+    font-size: 18px; /* Larger text */
+    padding: 10px; /* Add spacing inside the box */
+    border: 2px solid #ccc; /* Subtle border */
+    border-radius: 8px; /* Smooth rounded corners */
+    outline: none; /* Remove default focus outline */
+    display: block; /* Ensure it takes its own line */
+    margin: 10px auto; /* Center the input */
+}

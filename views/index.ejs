@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog Application</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <div class="container">
+        <h1>📝 My Blog Application ✨</h1>
+        <form action="/add" method="POST">
+            <div class="form-group">
+                <input type="text" name="title" placeholder="Enter Blog Title" required class="title-input">
+
+            </div>
+            <div class="form-group">
+                <textarea name="content" placeholder="Write your blog here..." required></textarea>
+            </div>
+            <button type="submit">Post</button>
+        </form>
+
+        <h2>Blog Posts:</h2>
+        <% if (posts.length === 0) { %>
+            <p class="no-posts">No blog posts yet. Be the first to write!</p>
+        <% } else { %>
+            <% posts.forEach(post => { %>
+                <div class="post-card">
+                    <h3><%= post.title %></h3>
+                    <p><%= post.content %></p>
+                    <span class="timestamp">Posted on <%= post.date %></span>
+                </div>
+            <% }) %>
+        <% } %>
+    </div>
+</body>
+</html>
